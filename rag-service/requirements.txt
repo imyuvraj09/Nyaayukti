@@ -1,0 +1,12 @@
+# Python 3.12. Install CPU PyTorch first on a CPU-only machine (see README).
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+pydantic>=2.10,<3
+pydantic-settings>=2.7,<3
+python-dotenv>=1,<2
+httpx>=0.27,<1
+openai>=1,<3
+google-genai>=1,<3
+pypdf>=5,<7
+sentence-transformers>=3,<6
+chromadb>=1,<2

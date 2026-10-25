@@ -1,0 +1,8 @@
+{
+  "sqlite_integrity": "ok",
+  "base_passages": 6545,
+  "indexed_passages": 6545,
+  "missing_ids": 0,
+  "unexpected_ids": 0,
+  "scope": "Read-only SQLite metadata check; vector search/model inference not executed."
+}

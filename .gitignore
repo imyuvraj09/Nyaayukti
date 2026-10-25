@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+**/node_modules/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+**/*.py[cod]
+venv/
+**/venv/
+.venv/
+**/.venv/
+*.egg-info/
+.pytest_cache/
+**/.pytest_cache/
+
+# Environment & Secrets
+.env
+**/.env
+.env.*
+**/.env.*
+*.env
+**/*.env
+!.env.example
+!**/.env.example
+
+# Build Output
+dist/
+**/dist/
+dist-ssr/
+build/
+*.egg
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS metadata
+.DS_Store
+**/.DS_Store
+Thumbs.db
+**/Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# RAG Service Vector Store (generated/reproducible on-disk embeddings)
+rag-service/vector_store/
+rag-service/vectorstore/chroma_db/
+rag-service/scratch/
+
+# Evaluation dynamic results
+evaluation/results/*.json
+evaluation/results/*.csv
+
+# Archives and backup files
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.bak
+*.old
+*.tmp

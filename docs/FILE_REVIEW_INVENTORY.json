@@ -1,0 +1,985 @@
+{
+  "scope": "Inventory and change status, not a claim of manual verification of every line.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "status": "unchanged"
+    },
+    {
+      "path": "LICENSE",
+      "status": "unchanged"
+    },
+    {
+      "path": "README.md",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/.env",
+      "status": "removed (runtime environment; regenerate locally)"
+    },
+    {
+      "path": "backend/.env.example",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/.gitignore",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/package-lock.json",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/package.json",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/app.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/config/database.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/config/env.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/controllers/auth.controller.js",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/src/controllers/chat.controller.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/controllers/health.controller.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/middleware/auth.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/middleware/browserSession.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/middleware/errorHandler.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/middleware/rateLimit.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/middleware/validate.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/models/.gitkeep",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/src/models/authSession.model.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/models/chatMessage.model.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/models/chatSession.model.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/models/index.js",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/src/models/user.model.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/routes/auth.routes.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/routes/chat.routes.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/routes/health.routes.js",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/src/server.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/services/.gitkeep",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/src/services/accountRecovery.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/services/authService.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/services/chatService.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/services/ragService.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/src/utils/apiResponse.js",
+      "status": "unchanged"
+    },
+    {
+      "path": "backend/src/utils/errors.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/tests/api.test.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/tests/chatConcurrency.test.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/tests/live_rag_integration.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "backend/tests/security.test.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "status": "unchanged"
+    },
+    {
+      "path": "docs/DATA.md",
+      "status": "unchanged"
+    },
+    {
+      "path": "docs/DEMO_AND_VIVA.md",
+      "status": "unchanged"
+    },
+    {
+      "path": "docs/REMOVALS.md",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "docs/REVIEW.md",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "docs/UPGRADE_V4.md",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "docs/retrieval-comparison.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "evaluation/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "evaluation/production.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/.env",
+      "status": "removed (runtime environment; regenerate locally)"
+    },
+    {
+      "path": "frontend/.env.example",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/.oxlintrc.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/README.md",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/index.html",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/package.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/ashoka-emblem.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/contributors/deep-suman-dev.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/contributors/nababrato-bishwas.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/contributors/pallab-bag.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/contributors/raju-shaw.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/contributors/sumit-kumar-nath.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/contributors/sunit-das.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/contributors/yuvraj-singh.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/nyaayukti-logo.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/nyaayukti-mark.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/nyayasetu-logo.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/nyayasetu-mark.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/public/supreme-court-transparent.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/App.css",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/App.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/assets/contributors/deep-suman-dev.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/contributors/nababrato-bishwas.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/contributors/pallab-bag.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/contributors/raju-shaw.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/contributors/sumit-kumar-nath.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/contributors/sunit-das.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/contributors/yuvraj-singh.jpg",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/hero.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/nyaayukti-logo.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/nyaayukti-mark.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/nyayasetu-logo.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/assets/nyayasetu-mark.png",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/auth/AuthContext.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/.gitkeep",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/components/ChatModal.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/ConnectSection.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/ErrorBoundary.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/Footer.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/HeroSection.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/Navbar.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/TrustSection.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/ChatEmptyState.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/ChatInput.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/ChatMessage.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/ChatMessages.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/ChatWorkspace.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/ConversationItem.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/ConversationSidebar.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/DeleteConfirmModal.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/LegalMarkdown.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/components/chat/SourceCitation.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/hooks/useChatSessions.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/index.css",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/main.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/pages/.gitkeep",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/pages/AboutPage.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/pages/AccountActionPage.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/pages/HomePage.jsx",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/src/pages/SignInPage.jsx",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/services/api.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/utils/citations.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "frontend/src/utils/responseParser.js",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/tests/citations.test.js",
+      "status": "unchanged"
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "status": "unchanged"
+    },
+    {
+      "path": "package.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "pytest.ini",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/.env",
+      "status": "removed (runtime environment; regenerate locally)"
+    },
+    {
+      "path": "rag-service/.env.example",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/.gitignore",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/README.md",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/api/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/api/routes.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/data/act_aliases.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/.gitkeep",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/chunking_manifest.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/embedding_manifest.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/ingestion_manifest.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/legal_chunks.jsonl",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/legal_documents.jsonl",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/supplemental_chunks.jsonl",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/processed/verification_results.json",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/.gitkeep",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/bns_2023.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/bnss_2023.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/bsa_2023.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/companies_act_2013.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/constitution_of_india.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/consumer_protection_act.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/gst_act_2017.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/insolvency_bankruptcy_code_2016.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/it_act.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/motor_vehicle_act.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/notifications/criminal_laws_commencement_2024.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/pocso_act_2012.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/right_to_education_act_2009.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/right_to_information_act_2005.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/data/raw/sexual_harassment_workplace_act_2013.pdf",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/embeddings/__init__.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/embeddings/embedding_model.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/ingestion/chunker.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/chunking_pipeline.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/document_loader.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/ingestion_pipeline.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/metadata_extractor.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/provision_boundary_validator.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/statutory_structure_parser.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/ingestion/text_cleaner.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/llm/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/llm/base.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/llm/provider.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/main.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/rag/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/rag/conversation_pipeline.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/rag/evidence.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/requirements.txt",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/retrieval/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/retrieval/hybrid.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/retrieval/query_processor.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/retrieval/reranker.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/retrieval/similarity_search.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/schemas/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/schemas/chunk.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/schemas/document.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/schemas/generation.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/schemas/query.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/schemas/response.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/schemas/retrieval.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/schemas/statutory.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/tests/test_conversation_pipeline.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/tests/test_corpus_retrieval.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/tests/test_evidence.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/tests/test_hybrid.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/utils/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/utils/config.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/utils/logger.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/.chroma.sqlite3.pus4H7",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/0ca2a9f4-d157-4c44-96e5-620aeec3acf2/data_level0.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/0ca2a9f4-d157-4c44-96e5-620aeec3acf2/header.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/0ca2a9f4-d157-4c44-96e5-620aeec3acf2/length.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/0ca2a9f4-d157-4c44-96e5-620aeec3acf2/link_lists.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/bd17bf00-9043-4506-b744-f21d7b405d3a/data_level0.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/bd17bf00-9043-4506-b744-f21d7b405d3a/header.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/bd17bf00-9043-4506-b744-f21d7b405d3a/index_metadata.pickle",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/bd17bf00-9043-4506-b744-f21d7b405d3a/length.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/bd17bf00-9043-4506-b744-f21d7b405d3a/link_lists.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/chroma.sqlite3",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/eb2d5ed7-ed7f-41a0-9754-377a96996f87/data_level0.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/eb2d5ed7-ed7f-41a0-9754-377a96996f87/header.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/eb2d5ed7-ed7f-41a0-9754-377a96996f87/length.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/eb2d5ed7-ed7f-41a0-9754-377a96996f87/link_lists.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/ec52d1b1-9bd9-4185-95c4-4087ce37b2fd/data_level0.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/ec52d1b1-9bd9-4185-95c4-4087ce37b2fd/header.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/ec52d1b1-9bd9-4185-95c4-4087ce37b2fd/length.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vector_store/chroma_db/ec52d1b1-9bd9-4185-95c4-4087ce37b2fd/link_lists.bin",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vectorstore/__init__.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "rag-service/vectorstore/chroma_store.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "rag-service/vectorstore/vectorstore_pipeline.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "status": "unchanged"
+    },
+    {
+      "path": "requirements.txt",
+      "status": "unchanged"
+    },
+    {
+      "path": "scripts/check-setup.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "scripts/check_index.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "scripts/configure_local.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "scripts/dev.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "scripts/diagnose_query.py",
+      "status": "unchanged"
+    },
+    {
+      "path": "scripts/run-rag.js",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": "tests/test_production_evaluation.py",
+      "status": "updated (formatting and/or implementation)"
+    },
+    {
+      "path": ".editorconfig",
+      "status": "added"
+    },
+    {
+      "path": ".prettierrc.json",
+      "status": "added"
+    },
+    {
+      "path": "backend/src/middleware/requestId.js",
+      "status": "added"
+    },
+    {
+      "path": "docs/FILE_REVIEW_INVENTORY.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/FINAL_REVIEW.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/INDEX_CHECK.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/RETRIEVAL_BENCHMARK.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/backend-audit-final.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/bandit-final.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/benchmark-reproduction.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/final-build.log",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/final-frontend-tests.log",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/final-integration.log",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/final-lint.log",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/final-python.log",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/final-ruff.log",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/final-security.log",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/frontend-audit-final.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/validation/python-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "pyproject.toml",
+      "status": "added"
+    },
+    {
+      "path": "rag-service/api/body_limit.py",
+      "status": "added"
+    },
+    {
+      "path": "rag-service/llm/clients.py",
+      "status": "added"
+    },
+    {
+      "path": "rag-service/requirements.lock.txt",
+      "status": "added"
+    },
+    {
+      "path": "rag-service/tests/test_hardening.py",
+      "status": "added"
+    },
+    {
+      "path": "scripts/benchmark_retrieval.py",
+      "status": "added"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "scope": "Development regression examples; lexical-only, no reranker or live LLM. Not a held-out legal-answer benchmark. Two added notification sources were absent from baseline.",
+  "n": 10,
+  "before_hits": 5,
+  "after_hits": 10,
+  "rows": [
+    {
+      "query": "BNS section 358 repeal savings",
+      "expected_chunk": "bns_2023_c0482",
+      "before_ids": [
+        "bsa_2023_c0187",
+        "consumer_c0139",
+        "bns_2023_c0482"
+      ],
+      "after_ids": [
+        "bns_2023_c0482",
+        "bns_2023_c0481",
+        "bns_2023_c0483"
+      ],
+      "before_hit": true,
+      "after_hit": true,
+      "after_excerpt": "CHAPTER XX\nREPEAL AND SA VINGS\n358.(1) The Indian Penal Code is hereby repealed.\n\n(2) Notwithstanding the repeal of the Code referred to in sub-section (1), it shall not\naffect,\u2014\n(a) the previous operation of the Code so"
+    },
+    {
+      "query": "BNSS section 531 repeal savings",
+      "expected_chunk": "bnss_2023_c0724",
+      "before_ids": [
+        "bnss_2023_c0724",
+        "bsa_2023_c0187",
+        "consumer_c0139"
+      ],
+      "after_ids": [
+        "bnss_2023_c0724",
+        "bnss_2023_c0723",
+        "bnss_2023_c0725"
+      ],
+      "before_hit": true,
+      "after_hit": true,
+      "after_excerpt": "531.\n\n(1) The Code of Criminal Procedure, 1973 is hereby repealed.\n\n(2) Notwithstanding such repeal\u2014\n(a) if, immediately before the date on which this Sanhita comes into force, there\nis any appeal, application, trial, in"
+    },
+    {
+      "query": "Consumer Protection Act consumer rights",
+      "expected_chunk": "consumer_c0006",
+      "before_ids": [
+        "consumer_c0030",
+        "consumer_c0037",
+        "consumer_c0038"
+      ],
+      "after_ids": [
+        "consumer_c0006",
+        "consumer_c0004",
+        "consumer_c0037"
+      ],
+      "before_hit": false,
+      "after_hit": true,
+      "after_excerpt": "Explanation.\u2014For the purposes of this clause,\u2014\n(a) the expression \"commercial purpose\" does not include use by a\nperson of goods bought and used by him exclusively for the purpose of\nearning his livelihood, by means of s"
+    },
+    {
+      "query": "Constitution article 20 conviction offence penalty",
+      "expected_chunk": "constitution_of_india_c0163",
+      "before_ids": [
+        "constitution_of_india_c0163",
+        "motor_vehicle_act_c0066",
+        "constitution_of_india_c0195"
+      ],
+      "after_ids": [
+        "constitution_of_india_c1218",
+        "constitution_of_india_c0163",
+        "constitution_of_india_c0195"
+      ],
+      "before_hit": true,
+      "after_hit": true,
+      "after_excerpt": "\u2014\n(1) \u201c\u0915\u0943\ufffd\u0937-\u0906\u092f\u201d \u0938\u0947 \u092d\u093e\u0930\u0924\u0940\u092f \u0906\u092f-\u0915\u0930 \u0938\u0947 \u0938\u0902\u092c\u0902\ufffd\u0927\u0924 \u0905\ufffd\u0927\ufffd\u0928\u092f\ufffd\u092e\ufffd\u0924\u092f\ufffd \u0915\u0947\n\u092a\u094d\u0930\u092f\u094b\u091c\u0928\ufffd \u0915\u0947 \ufffd\u0932\u090f \u092f\u0925\u093e \u092a\ufffd\u0930\u092d\u093e\ufffd\u0937\u0924 \u0915\u0943\ufffd\u0937-\u0906\u092f \u0905\ufffd\u092d\u092a\u094d\u0930\u0947\u0924 \u0939\u0948;\n\nTHE CONSTITUTION OF INDIA\n(Part XIX.\u2014 MISCELLANEOUS)\n223\n(2) \u201can Anglo -Indian\u201d means a person whose father or"
+    },
+    {
+      "query": "Right to Information Act section 7 disposal request",
+      "expected_chunk": "right_to_information_act_2005_c0019",
+      "before_ids": [
+        "right_to_information_act_2005_c0019",
+        "right_to_information_act_2005_c0001",
+        "right_to_information_act_2005_c0022"
+      ],
+      "after_ids": [
+        "right_to_information_act_2005_c0019",
+        "right_to_information_act_2005_c0001",
+        "right_to_information_act_2005_c0060"
+      ],
+      "before_hit": true,
+      "after_hit": true,
+      "after_excerpt": "6\nRight to Information Act, 2005\n(Chapter IL\u2014Right to information and obligations of public authorities.)\n7.\n\nDisposal of request.\u2014(/) Subject to the proviso to sub-section (2) of section 5 or the proviso to sub-section "
+    },
+    {
+      "query": "Information Technology Act section 43 damage computer",
+      "expected_chunk": "it_act_c0048",
+      "before_ids": [
+        "it_act_c0048",
+        "it_act_c0047",
+        "it_act_c0049"
+      ],
+      "after_ids": [
+        "it_act_c0048",
+        "it_act_c0049",
+        "it_act_c0004"
+      ],
+      "before_hit": true,
+      "after_hit": true,
+      "after_excerpt": "43. Penalty for damage to computer, computer system, etc.\nIf any person without permission of the owner or any other person who is incharge of a\ncomputer, computer system or computer network, \u2014\n(a) accesses or secures ac"
+    },
+    {
+      "query": "Motor Vehicles Act section 3 driving licence",
+      "expected_chunk": "motor_vehicle_act_c0028",
+      "before_ids": [
+        "motor_vehicle_act_c0000",
+        "motor_vehicle_act_c0065",
+        "motor_vehicle_act_c0031"
+      ],
+      "after_ids": [
+        "motor_vehicle_act_c0028",
+        "motor_vehicle_act_c0421",
+        "motor_vehicle_act_c0018"
+      ],
+      "before_hit": false,
+      "after_hit": true,
+      "after_excerpt": "2[2A. e-cart and e -rickshaw.\u2014(1) Save as otherwise provided in the proviso to sub -section (1) of\nsection 7 and sub-section (10) of section 9, the provisions of this Act shall apply to e-cart and e-rickshaw.\n\n(2) For th"
+    },
+    {
+      "query": "Companies Act section 166 duties directors",
+      "expected_chunk": "companies_act_2013_c0430",
+      "before_ids": [
+        "companies_act_2013_c0009",
+        "companies_act_2013_c0429",
+        "companies_act_2013_c0010"
+      ],
+      "after_ids": [
+        "companies_act_2013_c0430",
+        "companies_act_2013_c0429",
+        "companies_act_2013_c0009"
+      ],
+      "before_hit": false,
+      "after_hit": true,
+      "after_excerpt": "166.\n\nDuties of directors.\u2014 (1) Subject to the provisions of this Act, a director of a company shall act\nin accordance with the articles of the company.\n\n(2) A director of a company shall act in good faith in order to pr"
+    },
+    {
+      "query": "BNS commencement notification date come into force",
+      "expected_chunk": "bns_commencement_2024_c0000",
+      "before_ids": [
+        "companies_act_2013_c0030",
+        "motor_vehicle_act_c0015",
+        "consumer_c0000"
+      ],
+      "after_ids": [
+        "bns_commencement_2024_c0000",
+        "bns_2023_c0000",
+        "bns_2023_c0191"
+      ],
+      "before_hit": false,
+      "after_hit": true,
+      "after_excerpt": "MINISTRY OF HOME AFFAIRS\nNOTIFICATION\nNew Delhi, the 23rd February, 2024\n\nS.O. 850(E).\u2014In exercise of the powers conferred by sub-section (2) of section 1 of the Bharatiya\nNyaya Sanhita, 2023 (45 of 2023), the Central Go"
+    },
+    {
+      "query": "BNSS commencement notification date come into force",
+      "expected_chunk": "bnss_commencement_2024_c0000",
+      "before_ids": [
+        "companies_act_2013_c0030",
+        "motor_vehicle_act_c0015",
+        "consumer_c0000"
+      ],
+      "after_ids": [
+        "bnss_commencement_2024_c0000",
+        "bnss_2023_c0001",
+        "bnss_2023_c0726"
+      ],
+      "before_hit": false,
+      "after_hit": true,
+      "after_excerpt": "MINISTRY OF HOME AFFAIRS\nNOTIFICATION\nNew Delhi, the 23rd February, 2024\n\nS.O. 848(E).\u2014In exercise of the powers conferred by sub-section (3) of section 1 of the Bharatiya\nNagarik Suraksha Sanhita, 2023 (46 of 2023), the"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "reference": {
+    "median_ms": 46.68721300004108,
+    "samples": 25
+  },
+  "current": {
+    "median_ms": 2.773347999664111,
+    "samples": 25
+  },
+  "identical_rankings": true
+}

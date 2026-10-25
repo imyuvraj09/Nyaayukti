@@ -1,0 +1,14 @@
+{
+  "original": {
+    "median_ms": 39.813,
+    "max_ms": 54.558,
+    "samples": 25
+  },
+  "updated": {
+    "median_ms": 2.617,
+    "max_ms": 4.463,
+    "samples": 25
+  },
+  "identical_rankings": true,
+  "scope": "Warm BM25 only; five queries, five repetitions; no network or model inference."
+}
