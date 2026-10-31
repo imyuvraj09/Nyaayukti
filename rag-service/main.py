@@ -37,6 +37,22 @@ async def lifespan(app: FastAPI):
     logger.info("  Server      : http://%s:%s", settings.HOST, settings.PORT)
     logger.info("  Docs        : http://%s:%s/docs", settings.HOST, settings.PORT)
     logger.info("=" * 60)
+
+    # Pre-warm the RAG pipeline at startup so the first user request
+    # doesn't hit a cold-start delay (critical on Render free tier).
+    import threading
+    from api import routes as _routes
+
+    def _warm():
+        try:
+            logger.info("Pre-warming RAG pipeline in background thread...")
+            _routes.get_pipeline()
+            logger.info("RAG pipeline warm-up complete.")
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Pipeline warm-up failed (non-fatal): %s", exc)
+
+    threading.Thread(target=_warm, daemon=True).start()
+
     yield
     from api import routes
 
@@ -62,8 +78,10 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",  # Vite dev server (frontend)
-        "http://localhost:3000",  # Express backend
+        "http://localhost:5173",              # Vite dev server (frontend)
+        "http://localhost:3000",              # Express backend (local)
+        "https://nyaayukti.netlify.app",      # Production frontend
+        "https://nyaayukti-backend.onrender.com",  # Production backend
     ],
     allow_credentials=True,
     allow_methods=["*"],
