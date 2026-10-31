@@ -1,0 +1,67 @@
+services:
+  # -------------------------------------------------------------
+  # 1. Nyaayukti RAG Service (Python FastAPI)
+  # -------------------------------------------------------------
+  - type: web
+    name: nyaayukti-rag-service
+    runtime: python
+    rootDir: rag-service
+    plan: free
+    buildCommand: "pip install --upgrade pip && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && pip install --no-cache-dir -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: ENVIRONMENT
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: LLM_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: RAG_SERVICE_TOKEN
+        generateValue: true
+      - key: VECTOR_COLLECTION_NAME
+        value: nyayasetu_legal_documents
+      - key: RETRIEVAL_MODE
+        value: hybrid
+      - key: ENABLE_RERANKER
+        value: "true"
+
+  # -------------------------------------------------------------
+  # 2. Nyaayukti API Gateway (Node.js Express)
+  # -------------------------------------------------------------
+  - type: web
+    name: nyaayukti-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_URL
+        value: https://nyaayukti.netlify.app
+      - key: TRUST_PROXY_HOPS
+        value: "1"
+      - key: MONGODB_URI
+        sync: false
+      - key: RAG_SERVICE_TOKEN
+        fromService:
+          type: web
+          name: nyaayukti-rag-service
+          envVarKey: RAG_SERVICE_TOKEN
+      - key: RAG_SERVICE_URL
+        fromService:
+          type: web
+          name: nyaayukti-rag-service
+          property: host
+

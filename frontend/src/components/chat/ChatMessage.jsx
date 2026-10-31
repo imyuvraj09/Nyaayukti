@@ -69,12 +69,6 @@ export default function ChatMessage({ message, onRetry }) {
             </div>
           ) : (
             <>
-              {(metadata.qualityStatus === 'PARTIALLY_COMPLETE' ||
-                metadata.generationStatus === 'PARTIAL_SUCCESS') && (
-                <p role="status" className="answer-notice partial-notice">
-                  Partial answer — some requested issues could not be confirmed from available statutory evidence.
-                </p>
-              )}
               {metadata.generationStatus === 'INSUFFICIENT_EVIDENCE' && (
                 <p role="status" className="answer-notice insufficient-notice">
                   The available statutory corpus did not contain sufficient evidence to answer the core issues.

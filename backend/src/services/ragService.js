@@ -14,7 +14,11 @@ const {
 
 class RAGService {
   constructor(baseUrl = RAG_SERVICE_URL, timeoutMs = RAG_SERVICE_TIMEOUT_MS) {
-    this.baseUrl = baseUrl.replace(/\/+$/, '');
+    let clean = (baseUrl || 'http://127.0.0.1:8000').trim().replace(/\/+$/, '');
+    if (!/^https?:\/\//i.test(clean)) {
+      clean = `https://${clean}`;
+    }
+    this.baseUrl = clean;
     this.timeoutMs = timeoutMs;
   }
 

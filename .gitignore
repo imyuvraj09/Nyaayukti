@@ -56,8 +56,10 @@ yarn-debug.log*
 yarn-error.log*
 
 
-# RAG Service Vector Store (generated/reproducible on-disk embeddings)
-rag-service/vector_store/
+# RAG Service Vector Store
+# Allow bundled vector store for deployment on Render/cloud hosts
+!rag-service/vector_store/
+!rag-service/vector_store/**
 rag-service/vectorstore/chroma_db/
 rag-service/scratch/
 
